@@ -23,4 +23,6 @@
   thePics.forEach(function(element, index){
     element.addEventListener('click', ChangeElements, false);
   })
+
+  ChangeElements.call(document.querySelector('#F55'));
 })();
