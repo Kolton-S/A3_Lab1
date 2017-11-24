@@ -11,13 +11,16 @@
     theDesc.firstChild.nodeValue = objectIndex.description;
     theCarTitle.firstChild.nodeValue = objectIndex.car;
 
+    thePics.forEach(function(element, index){
+      element.classList.add('nonActive');
+    })
+
+    this.classList.remove('nonActive');
+
     appliedClass = this.id;
   }
 
   thePics.forEach(function(element, index){
-    //Loop through the images and add event handling to each one
     element.addEventListener('click', ChangeElements, false);
   })
-
-  ChangeElements.call(document.querySelector('#F55'));
 })();
